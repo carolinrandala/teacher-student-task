@@ -341,51 +341,15 @@
 
   <!-- Resources -->
 
-  <h2>Tables of students and teachers</h2>
 
-  <!-- Next Steps -->
-  <h2></h2>
-  <p>To add students or teachers push the following buttons below</p>
-  <br/><br/>
+  <div>
+    <br><br>
+    <app-student [studentTitle]="studentsTitle" [students]="students" ></app-student>
+    <br><br>
+    <app-teacher [teacherTitle]="teacherTitle" [teachers]="teachers" ></app-teacher>
 
-
-<div class="card-container">
-  <br><br>
-  <table border="1" style="background: -moz-mac-accentlightshadow">
-    <button class="card card-small" (click)="addStudent()" style="color: white; background: black">Add student
-    </button>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Age</th>
-      <th>Grade</th>
-    </tr>
-    <tr *ngFor="let student of students">
-      <td>{{ student.firstName }}</td>
-      <td>{{ student.lastName }}</td>
-      <td>{{ student.age }}</td>
-      <td>{{ student.grade }}</td>
-    </tr>
-  </table>
-  <br><br>
-  <table border="1" style="background: -moz-mac-accentlightshadow">
-    <button class="card card-small" (click)="addTeacher()" style="color: white; background: black">Add teacher
-    </button>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Age</th>
-      <th>Email</th>
-      <th>Subject</th>
-    </tr>
-    <tr *ngFor="let teacher of teachers">
-      <td>{{ teacher.firstName }}</td>
-      <td>{{ teacher.lastName }}</td>
-      <td>{{ teacher.age }}</td>
-      <td>{{ teacher.email }}</td>
-      <td>{{ teacher.subject }}</td>
-    </tr>
-  </table>
+  </div>
+</div>
 
 
   <!-- Terminal -->
@@ -393,10 +357,10 @@
   <!-- Links -->
 
   <!-- Footer -->
+
   <footer>
 
   </footer>
-
 
 
 
@@ -407,4 +371,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-

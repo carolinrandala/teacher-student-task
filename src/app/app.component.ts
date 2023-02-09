@@ -14,6 +14,9 @@ export class AppComponent implements OnInit{
   }
   title = 'Student-teacher task';
 
+  studentsTitle = 'List of students';
+  teacherTitle = 'List of teachers';
+
   students: Student[] = [];
 
   fetchStudents(): Student[] {
@@ -23,20 +26,9 @@ export class AppComponent implements OnInit{
     students.push(new Student('Anya', 'Dobor', 27, 4));
     students.push(new Student('Joel', 'Json', 23, 5));
     students.push(new Student('Liza', 'Allister', 30, 4));
-    students.push(new Student('Maria', 'Samsaro', 27, 4));
-    students.push(new Student('Jessica', 'Json', 21, 4));
+
 
     return students;
-  }
-  studentFirstName: string[] = ['Eva', 'Mari', 'Annika', 'Jane', 'Roberto', 'Thomas'];
-  studentLastName: string[] = ['Adamson', 'Anton', 'Reel', 'Jakarto', 'Steel'];
-
-  addStudent() {
-    let sFirstName = this.studentFirstName.at(Math.floor(Math.random() * this.studentFirstName.length));
-    let sLastName = this.studentLastName.at(Math.floor(Math.random() * this.studentLastName.length));
-
-    // @ts-ignore
-    this.students.push(new Student(sFirstName, sLastName, 20, 4));
   }
 
   teachers: Teacher[] = [];
@@ -44,24 +36,13 @@ export class AppComponent implements OnInit{
   fetchTeachers(): Teacher[] {
     let teachers: Teacher[] = [];
 
-    teachers.push(new Teacher('Trey', 'Johnson','TtJ@gmail.com', 30, 'Science'));
-    teachers.push(new Teacher('Bree', 'McAdam', 'B.Adam@gmail.com', 29, 'Mathematics'));
-    teachers.push(new Teacher('Samantha', 'Johnson','SamJohn@gmail.com', 28, 'Python'));
-    teachers.push(new Teacher('Bree', 'McAdam', 'B.Adam@gmail.com', 29, 'Java'));
-    teachers.push(new Teacher('Evert', 'Broad','E.Br@gmail.com', 32, 'HTML'));
-    teachers.push(new Teacher('Diana', 'Adamson', 'adamson@gmail.com', 31, 'Cyber-Security'));
+    teachers.push(new Teacher('Trey', 'Johnson', 30, 'Science'));
+    teachers.push(new Teacher('Bree', 'McAdam', 29, 'Mathematics'));
+    teachers.push(new Teacher('Samantha', 'Johnson', 28, 'Python'));
+    teachers.push(new Teacher('Bree', 'McAdam', 29, 'Java'));
 
     return teachers;
   }
 
-  teacherFirstName: string[] = ['Fred', 'Carl', 'Ly', 'James', 'Earl', 'Peter'];
-  teacherLastName: string[] = ['Franklyn', 'Tobias', 'Clause', 'Moet', 'Brave'];
-  addTeacher() {
-    let tFirstName = this.teacherFirstName.at(Math.floor(Math.random() * this.teacherFirstName.length));
-    let tLastName = this.teacherLastName.at(Math.floor(Math.random() * this.teacherLastName.length));
-    // @ts-ignore
-    this.teachers.push(new Teacher(tFirstName, tLastName,'email@gmail.com', 40, 'Science'));
-
-  }
 
 }
