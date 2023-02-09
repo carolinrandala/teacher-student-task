@@ -1,0 +1,17 @@
+<h2>{{ teacherTitle }}</h2>
+<table border="1" style="background: -moz-mac-accentlightshadow">
+  <button class="card card-small" (click)="addTeacher()" style="color: white; background: black">Add teacher
+  </button>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Age</th>
+    <th>Subject</th>
+  </tr>
+  <tr *ngFor="let teacher of teachers">
+    <td>{{ teacher.firstName }}</td>
+    <td>{{ teacher.lastName }}</td>
+    <td>{{ teacher.age }}</td>
+    <td>{{ teacher.subject }}</td>
+  </tr>
+</table>
