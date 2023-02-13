@@ -15,7 +15,7 @@ export class TeacherFormComponent {
   tFirstName: string = '';
   tLastName: string = '';
 
-  tAge: number = 38;
+  tAge: number = 0;
 
   tSubject: string = '';
 

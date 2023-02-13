@@ -14,9 +14,9 @@ export class StudentFormComponent {
   firstName: string = '';
   lastName: string = '';
 
-  sAge: number = 20;
+  sAge: number = 0;
 
-  sGrade: number = 5;
+  sGrade: number = 0;
 
 
 
