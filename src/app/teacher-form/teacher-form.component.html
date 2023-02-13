@@ -1,0 +1,35 @@
+<div id="studentList" *ngIf="teachers.length > 0">
+<table border="1" style="background: -moz-mac-accentlightshadow">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Age</th>
+    <th>Subject</th>
+  </tr>
+  <tr *ngFor="let teacher of teachers">
+    <td>{{ teacher.firstName }}</td>
+    <td>{{ teacher.lastName }}</td>
+    <td>{{ teacher.age }}</td>
+    <td>{{ teacher.subject }}</td>
+  </tr>
+</table>
+</div>
+
+<div id="teacherFormDiv" >
+  <h3>Add a new teacher</h3>
+  <form id="teacherForm" #teacherForm="ngForm" (ngSubmit)="addTeacher(teacherForm)" >
+    <label for="firstname">Teacher's firstname:</label>
+    <input type="text" name="name" id="firstname" [(ngModel)]="tFirstName"/>
+    <br/>
+    <label for="lastname">Teacher's lastname:</label>
+    <input type="text" name="name" id="lastname" [(ngModel)]="tLastName"/>
+    <br/>
+    <label for="age">Age:</label>
+    <input type="number" name="age" id="age" [(ngModel)]="tAge"/>
+    <br/>
+    <label for="subject">Subject:</label>
+    <input type="text" name="subject" id="subject" [(ngModel)]="tSubject"/>
+    <br/>
+    <button type="submit">Add teacher</button>
+  </form>
+</div>

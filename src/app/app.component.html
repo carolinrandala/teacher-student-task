@@ -339,14 +339,17 @@
 
   </div>
 
-  <!-- Resources -->
+  <!-- Resources
+  <app-student [studentTitle]="studentsTitle" [students]="students" ></app-student>
+
+    <app-teacher [teacherTitle]="teacherTitle" [teachers]="teachers" ></app-teacher> -->
 
 
   <div>
-    <br><br>
-    <app-student [studentTitle]="studentsTitle" [students]="students" ></app-student>
-    <br><br>
-    <app-teacher [teacherTitle]="teacherTitle" [teachers]="teachers" ></app-teacher>
+
+    <app-student-form></app-student-form>
+    <app-teacher-form></app-teacher-form>
+
 
   </div>
 </div>
