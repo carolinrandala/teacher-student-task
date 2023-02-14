@@ -18,11 +18,16 @@ export class StudentFormComponent {
 
   sGrade: number = 0;
 
+  isShowForm: boolean = false;
 
 
 
   addStudent(studentForm: NgForm) {
     this.students.push(new Student(this.firstName, this.lastName, this.sAge, this.sGrade));
     studentForm.reset();
+  }
+
+  showStudentForm() {
+    this.isShowForm = true;
   }
 }

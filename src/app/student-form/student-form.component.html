@@ -1,3 +1,4 @@
+<a href="#" (click)="showStudentForm()">Add new student</a>
 <div id="studentList" *ngIf="students.length > 0">
   <table border="1" style="background: -moz-mac-accentlightshadow">
     <tr>
@@ -15,7 +16,7 @@
   </table>
 </div>
 
-<div id="studentFormDiv" >
+<div id="studentFormDiv"  *ngIf="isShowForm">
   <h3>Add a new student</h3>
   <form id="studentForm" #studentForm="ngForm" (ngSubmit)="addStudent(studentForm)" >
     <label for="firstname">Student's firstname:</label>
