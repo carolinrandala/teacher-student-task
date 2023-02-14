@@ -24,7 +24,7 @@ export class StudentFormComponent {
 
   addStudent(studentForm: NgForm) {
     this.students.push(new Student(this.firstName, this.lastName, this.sAge, this.sGrade));
-    studentForm.reset();
+    studentForm.reset(); //Clears all the values
   }
 
   showStudentForm() {

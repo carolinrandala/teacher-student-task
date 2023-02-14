@@ -7,6 +7,9 @@ import { StudentComponent } from './student/student.component';
 import { TeacherFormComponent } from './teacher-form/teacher-form.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import {FormsModule} from "@angular/forms";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from "@angular/material/table";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import {FormsModule} from "@angular/forms";
   ],
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        BrowserAnimationsModule,
+        MatTableModule,
+        MatButtonModule
     ],
   providers: [],
   bootstrap: [AppComponent]

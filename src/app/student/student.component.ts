@@ -1,6 +1,5 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {Student} from "../shared/models/Student";
-// @ts-ignore
 import {MatTable} from "@angular/material/table";
 
 @Component({
@@ -10,18 +9,25 @@ import {MatTable} from "@angular/material/table";
 })
 export class StudentComponent implements OnInit{
   ngOnInit(): void {
+
   }
+
 
   @Input() studentTitle: string = '';
   @Input() students: Student[] = [];
 
 
   studentFirstName: string[] = ['Eva', 'Mari', 'Annika', 'Jane', 'Roberto', 'Thomas'];
-  studentLastName: string[] = ['Adamson', 'Anton', 'Reel', 'Jakarto', 'Steel'];
+  studentLastName: string[] = ['Adamson', 'Anton', 'Reel', 'Jordan', 'Steel'];
 
   sAge: number[] = [18, 20, 22, 19, 23, 21, 26];
 
   sGrade: number[] = [4, 5, 3, 5, 2, 3, 4];
+
+  displayedColumns: string[] = ['firstName','lastName', 'age', 'grade'];
+
+  // @ts-ignore
+  @ViewChild(MatTable) table: MatTable<Student>;
 
 
   addStudent() {
@@ -34,4 +40,14 @@ export class StudentComponent implements OnInit{
     this.students.push(new Student(sFirstName, sLastName, sAge, sGrade));
   }
 
+  addData() {
+    const randomElementIndex = Math.floor(Math.random() * this.students.length);
+    this.students.push(this.students[randomElementIndex]);
+    this.table.renderRows();
+  }
+
+  removeData() {
+    this.students.pop();
+    this.table.renderRows();
+  }
 }
