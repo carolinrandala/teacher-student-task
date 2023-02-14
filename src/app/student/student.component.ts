@@ -1,5 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {Student} from "../shared/models/Student";
+// @ts-ignore
+import {MatTable} from "@angular/material/table";
 
 @Component({
   selector: 'app-student',
@@ -21,6 +23,7 @@ export class StudentComponent implements OnInit{
 
   sGrade: number[] = [4, 5, 3, 5, 2, 3, 4];
 
+
   addStudent() {
     let sFirstName = this.studentFirstName.at(Math.floor(Math.random() * this.studentFirstName.length));
     let sLastName = this.studentLastName.at(Math.floor(Math.random() * this.studentLastName.length));
@@ -30,4 +33,5 @@ export class StudentComponent implements OnInit{
     // @ts-ignore
     this.students.push(new Student(sFirstName, sLastName, sAge, sGrade));
   }
+
 }
