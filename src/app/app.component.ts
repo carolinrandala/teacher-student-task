@@ -23,7 +23,7 @@ export class AppComponent implements OnInit{
     let students: Student[] = [];
 
     students.push(new Student('Peters', 'Johnson', 20, 5));
-    students.push(new Student('Anya', 'Dobor', 27, 4));
+    students.push(new Student('Anya', 'Davidson', 27, 4));
     students.push(new Student('Joel', 'Json', 23, 5));
     students.push(new Student('Liza', 'Allister', 30, 4));
 

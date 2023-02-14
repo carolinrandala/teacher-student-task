@@ -1,15 +1,17 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { TeacherComponent } from './teacher/teacher.component';
-import { StudentComponent } from './student/student.component';
-import { TeacherFormComponent } from './teacher-form/teacher-form.component';
-import { StudentFormComponent } from './student-form/student-form.component';
+import {AppComponent} from './app.component';
+import {TeacherComponent} from './teacher/teacher.component';
+import {StudentComponent} from './student/student.component';
+import {TeacherFormComponent} from './teacher/teacher-form/teacher-form.component';
+import {StudentFormComponent} from './student/student-form/student-form.component';
 import {FormsModule} from "@angular/forms";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatTableModule} from "@angular/material/table";
 import {MatButtonModule} from "@angular/material/button";
+import {StudentModule} from "./student/student.module";
+import {TeacherModule} from "./teacher/teacher.module";
 
 @NgModule({
   declarations: [
@@ -19,14 +21,17 @@ import {MatButtonModule} from "@angular/material/button";
     TeacherFormComponent,
     StudentFormComponent
   ],
-    imports: [
-        BrowserModule,
-        FormsModule,
-        BrowserAnimationsModule,
-        MatTableModule,
-        MatButtonModule
-    ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatButtonModule,
+    StudentModule,
+    TeacherModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

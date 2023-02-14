@@ -1,7 +1,7 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {Teacher} from "../shared/models/Teacher";
 import {MatTable} from "@angular/material/table";
-import {Student} from "../shared/models/Student";
+
 
 
 @Component({
@@ -29,7 +29,7 @@ export class TeacherComponent implements OnInit {
     this.teachers.push(new Teacher(tFirstName, tLastName, tAge, subject));
   }
 
-  displayedColumns: string[] = ['firstName','lastName', 'age','subject'];
+  displayedColumns: string[] = ['firstName','lastName','age','subject'];
 
 
   // @ts-ignore

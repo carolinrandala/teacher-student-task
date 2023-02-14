@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {Student} from "../shared/models/Student";
-import {Teacher} from "../shared/models/Teacher";
+import {Student} from "../../shared/models/Student";
+import {Teacher} from "../../shared/models/Teacher";
 import {NgForm} from "@angular/forms";
 
 @Component({
