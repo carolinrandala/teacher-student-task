@@ -11,10 +11,11 @@ import {MatTable} from "@angular/material/table";
 })
 export class TeacherComponent implements OnInit {
 
-  @Input() teacherTitle: string = '';
+ teacherTitle: string = '';
 
-  @Input() teachers: Teacher[] = [];
+ teachers: Teacher[] = [];
   ngOnInit(): void {
+    this.teachers = this.fetchTeachers();
   }
   teacherFirstName: string[] = ['Fred', 'Carl', 'Ly', 'James', 'Earl', 'Peter'];
   teacherLastName: string[] = ['Franklyn', 'Tobias', 'Clause', 'Moet', 'Brave'];
@@ -45,5 +46,19 @@ export class TeacherComponent implements OnInit {
     this.teachers.pop();
     this.table.renderRows();
   }
+
+
+
+  fetchTeachers(): Teacher[] {
+    let teachers: Teacher[] = [];
+
+    teachers.push(new Teacher('Trey', 'Johnson', 30, 'Science'));
+    teachers.push(new Teacher('Bree', 'McAdam', 29, 'Mathematics'));
+    teachers.push(new Teacher('Samantha', 'Johnson', 28, 'Python'));
+    teachers.push(new Teacher('Bree', 'McAdam', 29, 'Java'));
+
+    return teachers;
+  }
+
 
 }

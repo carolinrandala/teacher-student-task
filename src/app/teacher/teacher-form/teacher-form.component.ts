@@ -18,7 +18,7 @@ export class TeacherFormComponent {
   tAge: number = 0;
 
   tSubject: string = '';
-  isShowForm: boolean = false;
+  isShowForm: boolean = true;
 
 
 

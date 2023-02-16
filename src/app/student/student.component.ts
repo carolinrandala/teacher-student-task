@@ -8,13 +8,9 @@ import {MatTable} from "@angular/material/table";
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit{
-  ngOnInit(): void {
 
-  }
-
-
-  @Input() studentTitle: string = '';
-  @Input() students: Student[] = [];
+  studentTitle: string = '';
+ students: Student[] = [];
 
 
   studentFirstName: string[] = ['Eva', 'Mari', 'Annika', 'Jane', 'Roberto', 'Thomas'];
@@ -49,5 +45,20 @@ export class StudentComponent implements OnInit{
   removeData() {
     this.students.pop();
     this.table.renderRows();
+  }
+
+  fetchStudents(): Student[] {
+    let students: Student[] = [];
+
+    students.push(new Student('Peters', 'Johnson', 20, 5));
+    students.push(new Student('Anya', 'Davidson', 27, 4));
+    students.push(new Student('Joel', 'Json', 23, 5));
+    students.push(new Student('Liza', 'Allister', 30, 4));
+
+
+    return students;
+  }
+  ngOnInit(): void {
+    this.students = this.fetchStudents();
   }
 }

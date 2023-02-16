@@ -12,7 +12,26 @@ import {MatTableModule} from "@angular/material/table";
 import {MatButtonModule} from "@angular/material/button";
 import {StudentModule} from "./student/student.module";
 import {TeacherModule} from "./teacher/teacher.module";
+import {RouterModule, Routes} from "@angular/router";
 
+const appRoutes: Routes = [ //creating a routes object to make different pages
+  {
+    path: 'teacher',
+    component: TeacherComponent
+  },
+  {
+    path: 'create-teacher',
+    component: TeacherFormComponent
+  },
+  {
+    path: 'student',
+    component: StudentComponent
+  },
+  {
+    path: 'create-student',
+    component: StudentFormComponent
+  }
+  ];
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +47,8 @@ import {TeacherModule} from "./teacher/teacher.module";
     MatTableModule,
     MatButtonModule,
     StudentModule,
-    TeacherModule
+    TeacherModule,
+    RouterModule.forRoot(appRoutes) //passing created json arrays
   ],
   providers: [],
   bootstrap: [AppComponent]

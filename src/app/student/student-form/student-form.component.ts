@@ -18,7 +18,7 @@ export class StudentFormComponent {
 
   sGrade: number = 0;
 
-  isShowForm: boolean = false;
+  isShowForm: boolean = true;
 
 
 
